@@ -2,10 +2,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 const ping = require('./commands/ping')
 const gif = require('./commands/gif')
 
-const command = {
-    ping: ping,
-    gif: gif
-}
+const command = { ping, gif }
 
 module.exports = async function (message) {
     let tokens = message.content.split(" ");
