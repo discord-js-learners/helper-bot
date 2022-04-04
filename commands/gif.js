@@ -12,9 +12,5 @@ module.exports = async function (message, args) {
     const index = Math.floor(Math.random() * json.results.length)
 
     message.channel.send(json.results[index].url)
-    if (args.length > 0) {
-        return message.channel.send(`GIF from Tenor`)
-    } else {
-        return;
-    }
+    message.channel.send(`GIF from Tenor`)
 }
