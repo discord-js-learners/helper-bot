@@ -1,3 +1,3 @@
-module.exports = function (msg, args) {
-    message.channel.send(`Pong! ${Date.now() - message.createdTimestamp} ms`);
+module.exports = function (message, args) {
+    message.channel.send(`Pong! ${(Date.now() - message.createdTimestamp) / 1000} ms`);
 }
