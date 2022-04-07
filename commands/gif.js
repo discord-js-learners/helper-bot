@@ -14,5 +14,5 @@ module.exports = async function (message, args) {
     const index = Math.floor(Math.random() * json.results.length)
 
     message.channel.send(json.results[index].url)
-    message.channel.send(`GIF from Tenor`)
+    message.channel.send('GIF from Tenor')
 }
