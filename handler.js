@@ -1,4 +1,6 @@
-const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+function fetch(...args) {
+    return import('node-fetch').then(({ default: fetch }) => fetch(...args));
+}
 const ping = require('./commands/ping')
 const gif = require('./commands/gif')
 
@@ -13,8 +15,4 @@ module.exports = async function (message) {
     } else {
         return;
     }
-}
-
-function fetch(...args) {
-    return import('node-fetch').then(({ default: fetch }) => fetch(...args));
 }
