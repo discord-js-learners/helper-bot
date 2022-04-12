@@ -46,6 +46,6 @@ module.exports = function (message, args) {
         .setColor('RANDOM')
         .setDescription(randomarray(noquestion))
 
-    message.channel.send({ embeds: [reply] })
+        message.channel.send({ embeds: [reply] })
     }
 }
