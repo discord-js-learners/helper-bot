@@ -1,3 +1,6 @@
+
+const { MessageEmbed } = require('discord.js');
+const randomarray = require('./functions/randomarray')
 const replies = [
     'It is certain.',
     'It is decidedly so.',
@@ -22,10 +25,23 @@ const replies = [
     'Outlook not so good.',
     'Very doubtful.'
 ]
+const noquestion = [
+    'No question?',
+    'idk man, i cant answer with no question',
+    'bro quit using this command if you dont have a question',
+    'eightball needs a question',
+    'me dancin while waiting for ur question'
+]
 module.exports = function (message, args) {
     if (args.length > 0) {
         keywords = args.slice(1, args.length).join(' ')
+        const reply = new MessageEmbed()
+            .setTitle(keywords)
+            .setColor('RANDOM')
+            .setDescription(randomarray(replies))
+
+        message.channel.send({ embeds: [reply] })
+    } else {
+        message.channel.send(randomarray(noquestion))
     }
-    let index = Math.floor(Math.random() * replies.length)
-    message.channel.send(replies[index])
 }
