@@ -41,7 +41,8 @@ module.exports = function (message, args) {
             .setDescription(randomarray(replies))
 
         message.channel.send({ embeds: [reply] })
-    } else {const reply = new MessageEmbed()
+    } else {
+        const reply = new MessageEmbed()
         .setColor('RANDOM')
         .setDescription(randomarray(noquestion))
 
