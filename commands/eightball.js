@@ -43,8 +43,8 @@ module.exports = function (message, args) {
         message.channel.send({ embeds: [reply] })
     } else {
         const reply = new MessageEmbed()
-        .setColor('RANDOM')
-        .setDescription(randomarray(noquestion))
+            .setColor('RANDOM')
+            .setDescription(randomarray(noquestion))
 
         message.channel.send({ embeds: [reply] })
     }
