@@ -1,4 +1,4 @@
-module.exports = function (array) {
-    let index = Math.floor(Math.random() * array.length)
+module.exports = (array) => {
+    let index = Math.floor(Math.random() * array.length);
     return array[index];
 }

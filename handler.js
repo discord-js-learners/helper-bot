@@ -12,7 +12,11 @@ module.exports = async function (message) {
     let command = tokens.shift();
     if (command.charAt(0) === '!') {
         command = command.substring(1);
-        commands[command](message, tokens)
+        if(command in commands) {
+            commands[command](message, tokens)
+        } else {
+            return;
+        }
     } else {
         return;
     }

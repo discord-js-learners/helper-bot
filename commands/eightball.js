@@ -34,14 +34,17 @@ const noquestion = [
 ]
 module.exports = function (message, args) {
     if (args.length > 0) {
-        keywords = args.slice(1, args.length).join(' ')
+        keywords = args.join(' ')
         const reply = new MessageEmbed()
-            .setTitle(keywords)
+            .setTitle(`${keywords}`)
             .setColor('RANDOM')
             .setDescription(randomarray(replies))
 
         message.channel.send({ embeds: [reply] })
-    } else {
-        message.channel.send(randomarray(noquestion))
+    } else {const reply = new MessageEmbed()
+        .setColor('RANDOM')
+        .setDescription(randomarray(noquestion))
+
+    message.channel.send({ embeds: [reply] })
     }
 }
