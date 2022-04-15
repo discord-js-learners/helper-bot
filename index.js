@@ -12,6 +12,14 @@ client.on('ready', () => {
   console.log('ready for use')
 })
 
+client.on('shardError', error => {
+	console.error('A websocket connection encountered an error:', error);
+});
+
+client.on('unhandledRejection', error => {
+	console.error('Unhandled promise rejection:', error);
+});
+
 client.on('messageCreate', handler)
 
 console.log('finished checking')

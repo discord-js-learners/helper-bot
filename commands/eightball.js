@@ -1,5 +1,5 @@
-
 const { MessageEmbed } = require('discord.js');
+const name = 'eightball';
 const randomarray = require('./functions/randomarray')
 const replies = [
     'It is certain.',
@@ -32,7 +32,7 @@ const noquestion = [
     'eightball needs a question',
     'me dancin while waiting for ur question'
 ]
-module.exports = function (message, args) {
+module.exports = (message, args) => {
     if (args.length > 0) {
         keywords = args.join(' ')
         const reply = new MessageEmbed()
@@ -41,11 +41,13 @@ module.exports = function (message, args) {
             .setDescription(randomarray(replies))
 
         message.channel.send({ embeds: [reply] })
+        console.log(`${message.member.user.tag} executed command '!${name}'`)
     } else {
         const reply = new MessageEmbed()
             .setColor('RANDOM')
             .setDescription(randomarray(noquestion))
 
         message.channel.send({ embeds: [reply] })
+        console.log(`${message.member.user.tag} executed command '!${name}'`)
     }
 }

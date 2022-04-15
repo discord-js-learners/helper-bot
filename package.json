@@ -10,9 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "canvas": "^2.9.1",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "fs": "^0.0.1-security",
+    "mathjs": "^10.4.3",
     "node-fetch": "^3.2.3",
     "npm": "^8.6.0"
   },
