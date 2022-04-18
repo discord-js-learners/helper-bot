@@ -1,4 +1,7 @@
 const name = 'prime';
+
+
+
 const primeOrNot = require('./functions/primeOrNot')
 
 module.exports = (message, args) => {
