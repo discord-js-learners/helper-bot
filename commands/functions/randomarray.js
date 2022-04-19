@@ -3,6 +3,8 @@ module.exports = (array, object) => {
     let index = Math.floor(Math.random() * array.length);
     if (object !== null) {
         index = Math.floor(Math.random() * array.length.object);
+        return array[index].object
+    } else {
+        return array[index];
     }
-    return array[index];
 }
