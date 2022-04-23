@@ -42,13 +42,14 @@ module.exports = (message, args) => {
 			.setDescription(randomarray(replies));
 
 		message.channel.send({ embeds: [reply] });
-		console.log(`${message.member.user.tag} executed command '!${name}'`);
+		console.log(`${message.member.user.tag} executed '!${name}':`);
+		console.log(`keywords: ${keywords}`);
 	} else {
 		const reply = new MessageEmbed()
 			.setColor('RANDOM')
 			.setDescription(randomarray(noquestion));
 
 		message.channel.send({ embeds: [reply] });
-		console.log(`${message.member.user.tag} executed command '!${name}'`);
+		console.log(`${message.member.user.tag} executed command '!${name}', but didn't make a question.`);
 	}
 };

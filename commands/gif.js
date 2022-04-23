@@ -15,5 +15,7 @@ module.exports = async (message, args) => {
 	const index = Math.floor(Math.random() * json.results.length);
 	message.channel.send(json.results[index].url);
 	message.channel.send(`GIF from Tenor: ${keywords}`);
-	console.log(`${message.member.user.tag} executed '!${name}'`);
+
+	console.log(`${message.member.user.tag} executed '!${name}':`);
+	console.log(`keywords: ${keywords}`);
 };
