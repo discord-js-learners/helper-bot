@@ -22,7 +22,7 @@ module.exports = (message, args) => {
 		} else {
 			const mathHelpEmbed = new MessageEmbed()
 				.setTitle('Math command help')
-				.setDescription('You\'ll need help for this hard command.')
+				.setDescription('You\'ll need help for this hard command. **Remember to use space between numbers and operations**')
 				.addFields(
 					{ name: 'Addition:', value: '<num> + <num>' },
 					{ name: 'Subtraction:', value: '<num> - <num>' },
